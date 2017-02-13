@@ -1,0 +1,22 @@
+
+# index page
+GET         /                           controllers.HomeController.index
+
+# analysis page
+GET         /svnc_analysis              controllers.AnalysisController.svncAnalysisShow
+
+# forecast page
+GET         /svnc_forecast              controllers.ForecastController.svncForecastShow
+
+# Pcode Resource
+# POST    /svnc_analysis/pcodes/        controllers.Pcodes.create
+GET       /svnc_analysis/pcodes/        controllers.Pcodes.list
+GET       /svnc_analysis/:regCode/      controllers.Pcodes.getByRegCode(regCode: Int)
+
+# Region Resource
+# POST    /svnc_analysis/regions/        controllers.Regions.create
+GET     /svnc_analysis/regions/          controllers.Regions.list
+GET     /svnc_analysis/regions/:pcode/  controllers.Regions.getByPcode(pcode: String)
+
+
+

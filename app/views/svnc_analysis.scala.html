@@ -1,0 +1,15 @@
+@*
+* This is the SVNC-analysis page layout
+*@
+
+@import helper._
+
+@(message: String)(select_parameters: Html)
+<h2>@message</h2>
+<a href="@routes.HomeController.index()"> <-- Назад </a>
+<hr>
+
+<body>
+ @select_parameters
+</body>
+

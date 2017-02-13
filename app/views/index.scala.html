@@ -1,0 +1,17 @@
+@*
+* This is the home page layout
+*@
+@(message: String)
+
+<h2>@message</h2>
+
+<hr>
+
+<form action="@routes.AnalysisController.svncAnalysisShow()" method="get">
+    <button class="navlink">Анализ фактических значений СВНЦ</button>
+</form>
+
+<form action="@routes.ForecastController.svncForecastShow()" method="get">
+    <button class="navlink">Прогнозирование значений СВНЦ</button>
+</form>
+

@@ -1,0 +1,8 @@
+@import helper._
+
+@(pcodesList: List[String])(pcodeRegNameForm: Form[PcodeRegionName])
+
+@select(
+    pcodeRegNameForm("Выберите код участника"),
+    options = pcodesList map {pcode => (pcode, pcode)}
+)
